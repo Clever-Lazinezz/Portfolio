@@ -1,3 +1,20 @@
+READ ME:
+This BasicIntegerSet Calculator contains the following operations:
+* method is public unless otherwised specified
+addInt - private method which adds non-duplicate elements to a BasicIntegerSet
+of - static method which takes an unknown amount of ints and returns a new set
+cardinality - returns the size of a BasicIntegerSet
+isEmpty - returns a boolean on if a BasicIntegerSet is empty
+contains - @param int; returns a boolean on if a BasicIntegerSet contains the specified BasicIntegerSet
+toString - returns a string representation of a BasicIntegerSet; ex. {1, 2, 3, ...}
+equals - @param Object; returns a boolean on if a given object contains the same elements and cardinality as the current BasicIntegerSet
+isSubset - @param BasicIntegerSet; returns a boolean value for if a BasicIntegerSet is a subset of a passed BasicIntegerSet
+intersection - @param two BasicIntegerSets; returns a new BasicIntegerSet of the intersection of two BasicIntegerSets
+unionInclusive - @param two BasicIntegerSets; returns a new BasicIntegerSet of the inclusive union of two BasicIntegerSets
+unionExclusive - @param two BasicIntegerSets; returns a new BasicIntegerSet of the exclusive union of two BasicIntegerSets
+difference - @param two BasicIntegerSets; returns a new BasicIntegerSet of the difference of two BasicIntegerSets
+
+
 import java.util.Scanner;
 import java.util.ArrayList;
 
