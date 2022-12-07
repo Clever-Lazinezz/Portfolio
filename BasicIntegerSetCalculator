@@ -1,0 +1,169 @@
+import java.util.Scanner;
+import java.util.ArrayList;
+
+
+/* TO BE ADDED IN A FUTURE UPDATE
+
+IntegerSet should become an interface and the methods of IntergerSet should become part of a new "BasicIntegerSet"
+  
+Info from GIU should determine which constructor is called. Complex, Basic, etc.
+
+User input will likely be a string. If the input contains parentheses(excluding the beginning and end of input String), a complex set is made. If no parentheses are found, a simple set is made. Possible Problems: if user enters a complex set containing a single element. (ex. {(2,3)}) Lets just hope a user reads the instructions!
+
+Secondary proposal is telling users how to format entries. Example: "Enter sets with the following format: {1,6,4,7,,8,3,0}, {(3,9),(,7),(0,2),(4,7)}, etc. PLEASE NOTE THAT SPACES LEFT BLANK REPRESENT THE EMPTY SET!"
+
+
+https://blog.uta.edu/cseseniordesign/2019/04/05/machine/
+*/
+
+class BasicIntegerSet {
+  private ArrayList<Integer> BasicIntegerSet;
+
+  public BasicIntegerSet() {
+    super();
+    BasicIntegerSet = new ArrayList<Integer>(0);
+  }
+
+  // adds a new integer to the IntegerSet
+  // duplicates will not be added
+  private void addInt(int a) {
+    if (!this.BasicIntegerSet.contains(a)) {
+      BasicIntegerSet.add(Integer.valueOf(a));
+    }
+  }
+
+  // creates a new set of passed integers
+  // duplicates are not allowed in sets and will be ignored
+  // @param an unspecified amount of integers
+  public static BasicIntegerSet of(int... a) {
+    BasicIntegerSet set = new BasicIntegerSet();
+
+    for (int n : a) {
+      set.addInt(n);
+    }
+    return set;
+  }
+
+  public int cardinality() {
+    return BasicIntegerSet.size();
+  }
+
+  public boolean isEmpty() {
+    return BasicIntegerSet.isEmpty();
+  }
+
+  public boolean contains(int a) {
+    return BasicIntegerSet.contains(Integer.valueOf(a));
+  }
+
+  // works ex.{1, 2, 3}
+  @Override
+  public String toString() {
+    String s = "";
+    s += "{";
+    for (Integer a : BasicIntegerSet) {
+      s += a;
+      s += BasicIntegerSet.indexOf(a) < BasicIntegerSet.size() - 1 ? ", " : "";
+    }
+    s += "}";
+    return s;
+  }
+
+  // returns a boolean for if two sets contain the same elements and have the same cardinality
+  // @param one Object
+  @Override
+  public boolean equals(Object o) {
+    if (!(o instanceof BasicIntegerSet)) {
+      return false;
+    }
+
+    BasicIntegerSet other = (BasicIntegerSet) o;
+    int count = 0;
+
+    // Maybe could be simplified
+    for (Integer a : BasicIntegerSet) {
+      if (other.contains(a)) {
+        count++;
+      }
+    }
+
+    if (count == other.BasicIntegerSet.size() && count == this.BasicIntegerSet.size()) {
+      return true;
+    }
+    return false;
+  }
+
+  // returns a boolean value for if a BasicIntegerSet is a subset of a passed BasicIntegerSet
+  // @param one BasicIntegerSet
+  public boolean isSubset(BasicIntegerSet o) {
+    int count = 0;
+    for (Integer a : this.BasicIntegerSet) {
+      if (o.BasicIntegerSet.contains(a)) {
+        count++;
+      }
+    }
+    return count == this.BasicIntegerSet.size();
+  }
+
+  // returns a new BasicIntegerSet of the intersection of two BasicIntegerSets
+  // @param two BasicIntegerSets
+  public static BasicIntegerSet intersection(BasicIntegerSet set1, BasicIntegerSet set2) {
+    BasicIntegerSet set = new BasicIntegerSet();
+    for (Integer a : set1.BasicIntegerSet) {
+      if (set2.BasicIntegerSet.contains(a)) {
+        set.addInt(a);
+      }
+    }
+    return set;
+  }
+
+  
+  // Compiler is not gonna like the unchecked cast - maybe fix it
+  // returns a new BasicIntegerSet of the inclusive union of two BasicIntegerSets
+  // @param two BasicIntegerSets
+  @SuppressWarnings("unchecked")
+  public static BasicIntegerSet unionInclusive(BasicIntegerSet set1, BasicIntegerSet set2) {
+    BasicIntegerSet set = new BasicIntegerSet();
+    set.BasicIntegerSet = (ArrayList<Integer>) set1.BasicIntegerSet.clone();
+    int i = set1.BasicIntegerSet.size() > set2.BasicIntegerSet.size() ? set1.BasicIntegerSet.size() : set2.BasicIntegerSet.size();
+    for (int j = 0; j < i; ++j) {
+      try {
+        if (!set1.BasicIntegerSet.contains(set2.BasicIntegerSet.get(j))) {
+          set.addInt(set2.BasicIntegerSet.get(j));
+        }
+      } catch (Exception e) {
+        //just in case
+      }
+    }
+    return set;
+  }
+
+  // returns a new BasicIntegerSet of the exclusive union of two BasicIntegerSets
+  // @param two BasicIntegerSets
+  @SuppressWarnings("unchecked")
+  public static BasicIntegerSet unionExclusive(BasicIntegerSet set1, BasicIntegerSet set2) throws Exception {
+    BasicIntegerSet set = new BasicIntegerSet();
+    set.BasicIntegerSet = (ArrayList<Integer>) unionInclusive(set1, set2).clone();
+    for (Integer a : set.BasicIntegerSet) {
+      if (set1.BasicIntegerSet.contains(a) && set2.BasicIntegerSet.contains(a)) {
+      set.BasicIntegerSet.remove(a);
+      }
+    }
+    return set;
+  }
+
+  // returns a new BasicIntegerSet of the difference of two BasicIntegerSets
+  // @param two BasicIntegerSets
+  @SuppressWarnings("unchecked")
+  public static BasicIntegerSet difference(BasicIntegerSet set1, BasicIntegerSet set2) {
+    BasicIntegerSet set = new BasicIntegerSet();
+    set.BasicIntegerSet = (ArrayList<Integer>) set1.BasicIntegerSet.clone();
+    for (Integer a : set2.BasicIntegerSet) {
+      if (set.BasicIntegerSet.contains(a)) {
+      set.BasicIntegerSet.remove(a);
+      }
+    }
+    return set;
+  }
+ 
+}
