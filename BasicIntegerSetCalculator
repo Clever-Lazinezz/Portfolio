@@ -22,20 +22,6 @@ import java.util.Scanner;
 import java.util.ArrayList;
 
 
-/* TO BE ADDED IN A FUTURE UPDATE
-
-IntegerSet should become an interface and the methods of IntergerSet should become part of a new "BasicIntegerSet"
-  
-Info from GIU should determine which constructor is called. Complex, Basic, etc.
-
-User input will likely be a string. If the input contains parentheses(excluding the beginning and end of input String), a complex set is made. If no parentheses are found, a simple set is made. Possible Problems: if user enters a complex set containing a single element. (ex. {(2,3)}) Lets just hope a user reads the instructions!
-
-Secondary proposal is telling users how to format entries. Example: "Enter sets with the following format: {1,6,4,7,,8,3,0}, {(3,9),(,7),(0,2),(4,7)}, etc. PLEASE NOTE THAT SPACES LEFT BLANK REPRESENT THE EMPTY SET!"
-
-
-https://blog.uta.edu/cseseniordesign/2019/04/05/machine/
-*/
-
 class BasicIntegerSet {
   private ArrayList<Integer> BasicIntegerSet;
 
