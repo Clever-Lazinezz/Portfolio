@@ -1,4 +1,16 @@
-I created these scripts to load, transform, and confirm data in preparation for data analysis and exploratory machine learning model. Furthermore, you’ll find a script for visualizing some attribute distributions and a random forest machine learning model. Please note: data for these scripts can be found in the data folder
+I created these scripts to load, transform, and confirm data in preparation for data analysis and exploratory machine
+learning model. Furthermore, you’ll find a script for visualizing some attribute distributions and a random forest 
+machine learning model. Please note: data for these scripts can be found in the data folder
 
 Research Abstract:
-Software defect prediction (SDP) is a technique that aims to predict which parts of a software system are most likely to contain defects or errors and prioritize testing and debugging efforts accordingly. A variant of SDP commonly referred to as Just-In-Time SDP (JIT-SDP) aims to identify and prioritize potential defects in software code as they are being written rather than waiting until the end of a development cycle to identify and fix them. JIT-SDP is typically based on data mining and machine learning techniques, which analyze historical data on defects and other relevant factors to build predictive models. Despite the benefits of JIT-SDP, it is rarely used in practice due to poor predictive performance, which leads to many false positives and can cause developers to reject the tool. Researchers have attempted to improve the predictive performance of JIT-SDP by designing deep-learning models, but the improvement has been marginal at best. We divided software changeset data based on software change metric values, create strata based on a prediction percentage range, and evaluated how well our model predicts particular defects. However, our experiments created inconclusive results. 
+Software defect prediction (SDP) is a technique that aims to predict which parts of a software system are most likely
+to contain defects or errors and prioritize testing and debugging efforts accordingly. A variant of SDP commonly 
+referred to as Just-In-Time SDP (JIT-SDP) aims to identify and prioritize potential defects in software code as they 
+are being written rather than waiting until the end of a development cycle to identify and fix them. JIT-SDP is 
+typically based on data mining and machine learning techniques, which analyze historical data on defects and other 
+relevant factors to build predictive models. Despite the benefits of JIT-SDP, it is rarely used in practice due to 
+poor predictive performance, which leads to many false positives and can cause developers to reject the tool. 
+Researchers have attempted to improve the predictive performance of JIT-SDP by designing deep-learning models, but 
+the improvement has been marginal at best. We divided software changeset data based on software change metric values, 
+create strata based on a prediction percentage range, and evaluated how well our model predicts particular defects. 
+However, our experiments created inconclusive results. 
