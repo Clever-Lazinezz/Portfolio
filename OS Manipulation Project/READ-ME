@@ -1,1 +1,6 @@
+This project consist of four unique scripts. The goal is to prank a friend or use it on yourself. Ultimately, I wanted
+to practice programming os manipulation scripts in Python and C. For an overview of each script and the intended 
+function/order of these scripts, please read the Terminal Projects Outline.docx.
 
+NOTE: These programs were written and tested on a mac. While the libraries used should adjust for the operating system 
+of your device, it's possible windows or linux users may run into some issues.
