@@ -1,22 +1,16 @@
 # Portfolio
-Hi, 
+My name is Jordan Angus, and I'm a senior at Macaulay Honors College @ Brooklyn College. 
+I'm majoring in computer science and minoring in data science. My focus is Fintech. 
+My Relevant Experiences: 
+data analysis apprenticeship -  New York Job CEO Council
+data engineering intern - The Hartford
+Newman Catholic Center Treasurer - Brooklyn College
+Club Funding Committee - USG Brooklyn College
+Tech Funding Committee - USG Brooklyn College
+This repository contains recent projects that i'm able to publish.
+These projects will include Data Analysis(Python), Queries(SQL), stand-alone programs(C/C++, Python, R & Java) and 
+Infrastructures and Pipelines(Java & Python). Please take the time
+to review my work and any feedback is always welcomed (email: clever.lazninezz@gmail.com).
 
-My name is Jordan Angus, and I'm a Macaulay Honors College student @ Brooklyn College. 
-I'm majoring in computer science and minoring in data science. I've always been interested 
-in science. Some of my first experiments were building solid and liquid fuel rockets. In high 
-school, I focused on chemistry and even won 3rd place in my division's Science Olympiad "The 
-Sounds of Music" event. I loved chemistry because it was difficult and applied to 
-every other scientific discipline. Now that I'm a third-year college student, I've fallen 
-in love with Data Engineering and Analytics. EVERY SINGLE COMPANY BENEFITS FROM DATA. Instead 
-of going into details here, I want to use this repository to post a few of my most up-to-date 
-projects. These projects will include Data Analysis(Python & R), Queries(SQL), and 
-Infrastructures and Pipelines(Java & Apache Spark(to be learned)). Please take the time
-to review my work.
-
-The Best,
-Jordan
-
-Jordan Angus
-Data Engineer
-Macaulay Brooklyn College
+Socials:
 https://www.linkedin.com/in/jordan-angus02/
